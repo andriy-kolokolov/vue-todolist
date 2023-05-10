@@ -1,1 +1,36 @@
 
+#app {
+    margin: 150px auto 0 auto;
+    width: 1200px;
+    background-color: lightgrey;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+#app > * {
+    margin-top: 20px;
+}
+
+.list__item {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+.list__item i {
+    display: flex;
+    align-items: center;
+}
+
+.list__item i::before {
+    cursor: pointer;
+}
+
+#btn__add {
+    width: 15%;
+}
+

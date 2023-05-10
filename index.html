@@ -18,10 +18,14 @@
 		<div class="input-group mb-3">
 			<span class="input-group-text" id="input__label">ENTER TEXT TO ADD IN TODO LIST -> </span>
 			<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="input__label">
-			<button class="btn btn-success" type="button" id="btn__add">Button</button>
+			<button class="btn btn-success" type="button" id="btn__add">ADD TO LIST</button>
 		</div>
 		<ul class="p-0">
-			<li class="list__item" v-for="todo in arrTodos">{{ todo.text }}<i class="fa-solid fa-xmark"></i></li>
+			<li class="list__item" v-for="todo in arrTodos">
+				<input class="form-check-input" type="checkbox" v-model="todo.done" id="check__todo">
+				<span v-bind:class="{ 'text-decoration-line-through': todo.done }">{{ todo.text }}</span>
+				<i class="fa-solid fa-xmark ms-auto"></i>
+			</li>
 		</ul>
 	</div>
 

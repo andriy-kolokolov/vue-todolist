@@ -11,14 +11,30 @@
     margin-top: 20px;
 }
 
+#input__label {
+    cursor: default;
+    color: white;
+    background-color: #198653;
+}
+
+#check__todo {
+    margin-right: 10px;
+}
+
 .list__item {
+    cursor: default;
     margin-top: 10px;
     font-size: 1.5rem;
     padding: .5rem;
     display: flex;
-    justify-content: space-between;
     border: 2px solid grey;
     border-radius: 5px;
+    transition: .3s;
+    opacity: .8;
+}
+
+.list__item:hover {
+    opacity: 1;
 }
 
 .list__item i {

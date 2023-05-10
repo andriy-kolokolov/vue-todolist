@@ -3,22 +3,26 @@ const APP = Vue.createApp({
         return {
             arrTodos: [
                 {
-                    text: 'become rich',
+                    text: 'Become a Chief Technical Officer(CTO) at Google',
+                    done: true
+                },
+                {
+                    text: 'Become a millionaire',
                     done: false
                 },
                 {
-                    text: 'go shopping',
-                    done: false
+                    text: 'Plant a tree',
+                    done: true
                 },
                 {
-                    text: 'cook pasta',
+                    text: 'Buy penthouse in Dubai',
                     done: false
                 }
             ]
         }
     },
     methods: {
-
+        
     }
 });
 

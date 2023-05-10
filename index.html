@@ -17,14 +17,17 @@
 		<h1 class="text-center">TODO LIST</h1>
 		<div class="input-group mb-3">
 			<span class="input-group-text" id="input__label">ENTER TEXT TO ADD IN TODO LIST -> </span>
-			<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="input__label">
-			<button class="btn btn-success" type="button" id="btn__add">ADD TO LIST</button>
+			<input type="text" class="form-control" v-model="newTodoText" aria-label="Sizing example input"
+					aria-describedby="input__label" @keyup.enter="addTodo">
+			<button class="btn btn-success" type="button" @click="addTodo" >ADD TO LIST</button>
 		</div>
+
 		<ul class="p-0">
-			<li class="list__item" v-for="todo in arrTodos">
-				<input class="form-check-input" type="checkbox" v-model="todo.done" id="check__todo">
-				<span v-bind:class="{ 'text-decoration-line-through': todo.done }">{{ todo.text }}</span>
-				<i class="fa-solid fa-xmark ms-auto"></i>
+			<li class="list__item" v-for="(todo, index) in arrTodos">
+				<input class="form-check-input" type="checkbox" v-model="todo.done" :id="'check__todo_'+index">
+				<label :for="'check__todo_'+index" v-bind:class="{ 'text-decoration-line-through': todo.done }"
+						class="todo__label">{{todo.text }}</label>
+				<i class="fa-solid fa-xmark ms-auto" @click="removeTodo(todo)"></i>
 			</li>
 		</ul>
 	</div>

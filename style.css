@@ -17,8 +17,8 @@
     background-color: #198653;
 }
 
-#check__todo {
-    margin-right: 10px;
+.todo__label {
+    margin-left: 10px;
 }
 
 .list__item {
